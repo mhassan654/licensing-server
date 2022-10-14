@@ -1,0 +1,65 @@
+{
+    "name": "mhassan654/licensing-server",
+    "description": "Licensing server for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.2.7",
+    "keywords": [
+        "laravel",
+        "license",
+        "license-server",
+        "licensing-server",
+        "license-manager"
+    ],
+    "authors": [
+        {
+            "name": "Muwonge Hassan",
+            "email": "hassansaava@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/mhassan654/licensing-server/issues",
+        "source": "https://github.com/mhassan654/licensing-server"
+    },
+    "require": {
+        "php": "^8.0.2",
+        "ext-filter": "*",
+        "ext-intl": "*",
+        "ext-json": "*",
+        "illuminate/support": "^9.0",
+        "jeremykendall/php-domain-parser": "^6.1",
+        "mhassan654/ultimate-support": "^1.0",
+        "laravel/sanctum": "^2.1 || ^3.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.4",
+        "orchestra/testbench": "^7.0.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "mhassan654\\LicenseServer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "mhassan654\\LicenseServer\\LicenseServerServiceProvider"
+            ],
+            "aliases": {
+                "LicenseServer": "mhassan654\\LicenseServer\\Facades\\LicenseServer"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
