@@ -29,7 +29,7 @@ This package requires [license-connector](https://github.com/mhassan654/licensin
 Get via composer
 
 ```bash
-composer require laravel-ready/license-server
+composer require mhassan654/licensing-server
 ```
 
 Publish migrations and migrate
@@ -39,7 +39,7 @@ Publish migrations and migrate
 php artisan vendor:publish --tag=license-server-migrations
 
 # apply migrations
-php artisan migrate --path=/database/migrations/laravel-ready/license-server
+php artisan migrate --path=/database/migrations/mhassan654/licensing-server
 ```
 
 Configs are very important. You can find them in [license-server.php](config/license-server.php) file. You should read all configs and configure for your needs.
