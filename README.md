@@ -1,6 +1,6 @@
 # License Server
 
-[![MHassan Laravel License Server](https://preview.dragon-code.pro/EgoistDeveloper/Laravel-License-Server.svg?brand=laravel)](https://github.com/mhassan654/license-server)
+<!-- [![MHassan Laravel License Server](https://preview.dragon-code.pro/EgoistDeveloper/Laravel-License-Server.svg?brand=laravel)](https://github.com/mhassan654/license-server) -->
 
 [![Stable Version][badge_stable]][link_packagist]
 [![Unstable Version][badge_unstable]][link_packagist]
@@ -11,7 +11,7 @@
 
 **License Server** package, which is a Laravel package that allows you to manage your Laravel applications license. You can use it with any product or service. License Server comes with the agnostic license management system, which allows you to manage your licenses in a simple and easy way. Just add license relation to any product model then you can work in your logic.
 
-This package requires [license-connector](https://github.com/mhassan654/license-connector) package. **License Connector** is client implementation for License Server. Package for the client makes a request to **License Server** and gets a response.
+This package requires [license-connector](https://github.com/mhassan654/licensing-connector) package. **Licensing Connector** is client implementation for License Server. Package for the client makes a request to **License Server** and gets a response.
 
 ## 📋 Requirements
 
