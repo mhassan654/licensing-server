@@ -3,7 +3,7 @@
     "description": "Licensing server for Laravel",
     "type": "library",
     "license": "MIT",
-    "version": "1.2.7",
+    "version": "1.0.0",
     "keywords": [
         "laravel",
         "license",
