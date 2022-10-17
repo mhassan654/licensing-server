@@ -5,7 +5,7 @@ namespace Mhassan654\LicenseServer\Http\Controllers\Api;
 use Illuminate\Http\Request;
 
 use Mhassan654\LicenseServer\Models\IpAddress;
-use Mhassan654\UltimateSupport\Support\IpSupport;
+use Mhassan654\LicenseSupport\Support\IpSupport;
 use Mhassan654\LicenseServer\Services\LicenseService;
 use Mhassan654\LicenseServer\Http\Controllers\BaseController;
 
@@ -24,7 +24,6 @@ class AuthController extends BaseController
      */
     public function login(Request $request)
     {
-//        return $request;
         $request->validate([
             'license_key' => 'required|string|uuid',
         ]);
@@ -35,14 +34,10 @@ class AuthController extends BaseController
 
         $license = LicenseService::getLicenseByKey( $licenseKey);
 
-//        return $license;
-
         if ($license) {
             $license->tokens()->where('name', $domain)->delete();
 
             $ipAddress = IpAddress::where('license_id', $license->id)->first();
-
-//            dd($ipAddress);
             $serverIpAddress = IpSupport::getIP();
 
             if (!$ipAddress) {
