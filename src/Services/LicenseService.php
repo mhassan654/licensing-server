@@ -63,6 +63,7 @@ class LicenseService
         bool $isLifetime = false,
         bool $isTrial = false,
     ): null | License {
+
         if ($licensableModel->licensable() === null) {
             throw new LicenseException('Given model is not licensable.');
         }
@@ -76,9 +77,10 @@ class LicenseService
 
         if ($domain) {
             $domain = self::validateDomain($domain);
+            // dd($domain);
 
             if (self::getLicenseByDomain($domain) !== null) {
-                throw new LicenseException('License already exists for this domain.');
+               throw new LicenseException('License already exists for this domain.');
             }
 
             $data['domain'] = $domain;

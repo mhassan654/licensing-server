@@ -1,4 +1,4 @@
-# License Server
+# Licensing Server
 
 <!-- [![MHassan Laravel License Server](https://preview.dragon-code.pro/EgoistDeveloper/Laravel-License-Server.svg?brand=laravel)](https://github.com/mhassan654/license-server) -->
 
