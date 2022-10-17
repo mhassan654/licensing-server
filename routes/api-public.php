@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Config;
 
-use App\Http\Controllers\Api\LicenseValidationController;
+//use App\Http\Controllers\Api\LicenseValidationController;
 use Mhassan654\LicenseServer\Http\Controllers\Api\AuthController;
 
 /**
@@ -14,31 +14,31 @@ use Mhassan654\LicenseServer\Http\Controllers\Api\AuthController;
 Route::prefix('api/license-server')
     ->name('license-server.')
     ->middleware([
-        'api',
+       'api',
         // 'ls-domain-guard',
-        'throttle:60,1',
+       'throttle:60,1',
     ])
     ->group(function () {
         Route::prefix('auth')->name('auth.')->group(function () {
             Route::post('login', [AuthController::class, 'login'])->name('login');
         });
 
-        $licenseController = Config::get('license-server.controllers.license_validation');
+       $licenseController = Config::get('license-server.controllers.license_validation');
 
-        $licenseController = $licenseController && is_array($licenseController)
-            ? $licenseController
-            : [LicenseValidationController::class, 'licenseValidate'];
+       $licenseController = $licenseController && is_array($licenseController)
+           ? $licenseController
+           : [LicenseValidationController::class, 'licenseValidate'];
 
-        $licenseMiddlewares = [
-            'auth:sanctum',
-            'ls-license-guard',
-        ];
+       $licenseMiddlewares = [
+           'auth:sanctum',
+           'ls-license-guard',
+       ];
 
-        $addionalMiddlewares = Config::get('license-server.license_middlewares', []);
+       $addionalMiddlewares = Config::get('license-server.license_middlewares', []);
 
-        if ($addionalMiddlewares && count($addionalMiddlewares)) {
-            $licenseMiddlewares = array_merge($licenseMiddlewares, $addionalMiddlewares);
-        }
+       if ($addionalMiddlewares && count($addionalMiddlewares)) {
+           $licenseMiddlewares = array_merge($licenseMiddlewares, $addionalMiddlewares);
+       }
 
-        Route::middleware($licenseMiddlewares)->post('license', $licenseController);
+       Route::middleware($licenseMiddlewares)->post('license', $licenseController);
     });
