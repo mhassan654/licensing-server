@@ -5,12 +5,13 @@ namespace Mhassan654\LicenseServer;
 use Illuminate\Routing\Router;
 
 use Illuminate\Support\ServiceProvider;
+use Mhassan654\LicenseServer\EventServiceProvider;
+use Laravel\Sanctum\Http\Middleware\CheckAbilities;
 use Mhassan654\LicenseServer\Support\DomainSupport;
 use Mhassan654\LicenseServer\Services\LicenseService;
+
 use Mhassan654\LicenseServer\Http\Middleware\DomainGuardMiddleware;
 use Mhassan654\LicenseServer\Http\Middleware\LicenseGuardMiddleware;
-
-use Laravel\Sanctum\Http\Middleware\CheckAbilities;
 
 final class LicenseServerServiceProvider extends ServiceProvider
 {
