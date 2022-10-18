@@ -11,21 +11,20 @@ use Mhassan654\LicenseServer\Http\Controllers\BaseController;
 
 class AuthController extends BaseController
 {
+    public function  __construct()
+    {
+        $this->middleware("auth:api",["except"=>["login"]]);
+    }
+
     /**
      * Login with sanctum
      *
      * @param Request $request
-     * @return Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
      */
     public function login(Request $request)
     {
-
-        // dd($request);
-        session(['key' =>  return $request.]);
-
-        // $request->session()->put('data',$request);
-
-        return $request;
+//        return $request;
         $request->validate([
             'license_key' => 'required|string|uuid',
         ]);
@@ -36,10 +35,14 @@ class AuthController extends BaseController
 
         $license = LicenseService::getLicenseByKey( $licenseKey);
 
+//        return $license;
+
         if ($license) {
             $license->tokens()->where('name', $domain)->delete();
 
             $ipAddress = IpAddress::where('license_id', $license->id)->first();
+
+//            dd($ipAddress);
             $serverIpAddress = IpSupport::getIP();
 
             if (!$ipAddress) {
