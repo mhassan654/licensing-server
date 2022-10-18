@@ -52,10 +52,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "mhassan654\\LicenseServer\\LicenseServerServiceProvider"
+                "Mhassan654\\LicenseServer\\LicenseServerServiceProvider"
             ],
             "aliases": {
-                "LicenseServer": "mhassan654\\LicenseServer\\Facades\\LicenseServer"
+                "LicenseServer": "Mhassan654\\LicenseServer\\Facades\\LicenseServer"
             }
         }
     },
