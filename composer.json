@@ -37,7 +37,7 @@
     },
     "autoload": {
         "psr-4": {
-            "mhassan654\\LicenseServer\\": "src/"
+            "Mhassan654\\LicenseServer\\": "src/"
         }
     },
     "autoload-dev": {
