@@ -1,4 +1,4 @@
-# License Server
+# Licensing Server
 
 <!-- [![MHassan Laravel License Server](https://preview.dragon-code.pro/EgoistDeveloper/Laravel-License-Server.svg?brand=laravel)](https://github.com/mhassan654/license-server) -->
 
@@ -328,15 +328,15 @@ In development you may use domain like `example.test` etc. but you won't pass do
 - Don't forget this package just provides management of licenses and product/customer communication.
 - Please don't confuse it with ioncube or similar source code encryption tools.
 
-<!-- 
-[badge_downloads]:      https://img.shields.io/packagist/dt/laravel-ready/license-server.svg?style=flat-square
 
-[badge_license]:        https://img.shields.io/packagist/l/laravel-ready/license-server.svg?style=flat-square
+[badge_downloads]:      https://img.shields.io/packagist/dt/mhassan654/license-server.svg?style=flat-square
 
-[badge_stable]:         https://img.shields.io/github/v/release/laravel-ready/license-server?label=stable&style=flat-square
+[badge_license]:        https://img.shields.io/packagist/l/mhassan654/license-server.svg?style=flat-square
+
+[badge_stable]:         https://img.shields.io/github/v/release/mhassan654/license-server?label=stable&style=flat-square
 
 [badge_unstable]:       https://img.shields.io/badge/unstable-dev--main-orange?style=flat-square
 
 [link_license]:         LICENSE
 
-[link_packagist]:       https://packagist.org/packages/laravel-ready/license-server -->
+[link_packagist]:       https://packagist.org/packages/mhassan654/license-server
