@@ -3,7 +3,6 @@
     "description": "Licensing server for Laravel",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
     "keywords": [
         "laravel",
         "license",
@@ -22,7 +21,7 @@
         "source": "https://github.com/mhassan654/licensing-server"
     },
     "require": {
-        "php": "^8.0.2",
+        "php": "^7.3|^8.0|^8.1",
         "ext-filter": "*",
         "ext-intl": "*",
         "ext-json": "*",
