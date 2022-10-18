@@ -3,8 +3,8 @@
 namespace Mhassan654\LicenseServer;
 
 use Illuminate\Support\Facades\Config;
-use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
+use Illuminate\Support\ServiceProvider;
 use Mhassan654\LicenseServer\Events\LicenseChecked;
 use Mhassan654\LicenseServer\Exceptions\ListenerNotFoundException;
 
